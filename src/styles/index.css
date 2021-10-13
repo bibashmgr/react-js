@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.books-box {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 50px;
+}
+
+.book-box {
+    background-color: rgb(229, 238, 255);
+    padding: 50px;
+    cursor: pointer;
+}
+
+.title-name {
+    margin-top: 10px;
+}
+
+.aurthor-name {
+    margin-top: 5px;
+}

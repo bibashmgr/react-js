@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// importing css
+import './styles/index.css';
+
 // stateless functional components
 // function name should be capital
 // always return JSX
@@ -90,39 +93,36 @@ import ReactDOM from 'react-dom';
 // };
 
 function BookList() {
-  return (
-    <section>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-    </section>
-  );
+    return ( 
+        <section className='books-box'>
+            <Book></Book>
+            <Book></Book>
+            <Book></Book>
+        </section>
+    );
 }
 
 const Book = () => {
-  return (
-    <article>
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
-    </article>
-  );
+    return (
+        <article className='book-box'>
+            <Image></Image>
+            <Title></Title>
+            <Aurthor></Aurthor>
+        </article>
+    );
 };
 const Image = () => {
-  return (
-    <img
-      src='https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg'
-      alt=''
-    />
-  );
+    return ( 
+        <img src = 'https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg' alt = '' className='image' />
+    );
 };
 
 const Title = () => {
-  return <h2>The Last Thing He Told Me: A Novel</h2>;
+    return <h2 className='title-name'> The Last Thing He Told Me </h2>;
 };
 
-const Author = () => {
-  return <h4> Laura Dave</h4>;
+const Aurthor = () => {
+    return <h4 className='aurthor-name'> Laura Dave </h4>;
 };
 
-ReactDOM.render(<BookList />, document.getElementById('root'));
+ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
