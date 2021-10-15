@@ -92,37 +92,158 @@ import './styles/index.css';
 //   return <p>Love yourself or Nobody will</p>;
 // };
 
-function BookList() {
-    return ( 
+// function BookList() {
+//     return ( 
+//         <section className='books-box'>
+//             <Book></Book>
+//             <Book></Book>
+//             <Book></Book>
+//         </section>
+//     );
+// }
+
+// const Book = () => {
+//     return (
+//         <article className='book-box'>
+//             <Image></Image>
+//             <Title></Title>
+//             <Author></Author>
+//         </article>
+//     );
+// };
+// const Image = () => {
+//     return ( 
+//         <img src = 'https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg' alt = '' className='image' />
+//     );
+// };
+
+// const Title = () => {
+//     return <h1 className='title-name'> The Last Thing He Told Me </h1>;
+// };
+
+// const Author = () => {
+//     // here, the first curly backet is for entering into js worlf and the second one is for creating object
+//     return <h4 style={{letterSpacing: '2px', color:'#605d5d'}} className='author-name'> Laura Dave </h4>;
+// };
+
+// // setting-up variables:
+// const title = 'The Last Thing He Told Me';
+// const author = 'Laura Dave';
+// const img = 'https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg';
+
+// const BookList = () => {
+//     return(
+//         <section className = 'books-box'>
+//             <Book></Book>
+//         </section>
+//     );
+// };
+
+// const Book = () => {
+//     return(
+//         <article className = 'book-box'>
+//             <img src = {img} alt = '' className='image' />
+//             <h1 className='title-name'> {title} </h1>
+//             <h4 className='author-name'> {author} </h4>
+//             <div className='price'>Rs. 800/-</div>
+//         </article>
+//     );
+// };
+
+// // setting-up variables:
+// const firstBook = {
+//     img: 'https://pos.booksmandala.com/images/3936',
+//     title: 'Sold',
+//     author: ' Patricia McCormick'
+// }
+// const secondBook = {
+//     img: 'https://pos.booksmandala.com/images/5226',
+//     title: 'The Fifth mountain',
+//     author: 'Paulo Coelho'
+// }
+// const thirdBook = {
+//     img: 'https://pos.booksmandala.com/images/8525',
+//     title: 'Kara',
+//     author: 'Sushil Karki'
+// }
+
+// const BookList = () => {
+//     return(
+//         <section className='books-box'>
+//             <Book 
+//                 img = {firstBook.img} 
+//                 title = {firstBook.title} 
+//                 author = {firstBook.author}>
+//                 <p>
+//                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto natus cupiditate dolores corporis magni dolorum facere, quos nisi sint officia quia! Ut odio doloribus porro. Dicta quam laborum perspiciatis!
+//                 </p>
+//             </Book>
+//             <Book 
+//                 img = {secondBook.img} 
+//                 title = {secondBook.title} 
+//                 author = {secondBook.author}>
+//             </Book>
+//             <Book 
+//                 img = {thirdBook.img} 
+//                 title = {thirdBook.title} 
+//                 author = {thirdBook.author}>
+//             </Book>
+//         </section>
+//     );
+// };
+
+// const Book = (props) => {
+//     const {img, title, author, children} = props;
+//     return(
+//         <article className='book-box'>
+//             <img src={img} alt="" className='image' />
+//             <h1 className='title-name'> {title} </h1>
+//             <h4 className='author-name'> {author} </h4>
+//             {children}
+//         </article>
+//     );
+// };
+
+// setting-up variables:
+const books = [
+{
+    img: 'https://pos.booksmandala.com/images/3936',
+    title: 'Sold',
+    author: ' Patricia McCormick'
+},
+{
+    img: 'https://pos.booksmandala.com/images/5226',
+    title: 'The Fifth mountain',
+    author: 'Paulo Coelho'
+},
+{
+    img: 'https://pos.booksmandala.com/images/8525',
+    title: 'Kara',
+    author: 'Sushil Karki'
+}
+];
+
+const BookList = () => {
+    return(
         <section className='books-box'>
-            <Book></Book>
-            <Book></Book>
-            <Book></Book>
+            {books.map((book) => {
+                return(
+                    <Book book = {book}></Book>
+                );
+            })}
         </section>
     );
-}
+};
 
-const Book = () => {
-    return (
+const Book = (props) => {
+    const {img, title, author} = props.book;
+    return(
         <article className='book-box'>
-            <Image></Image>
-            <Title></Title>
-            <Aurthor></Aurthor>
+            <img src={img} alt={img} className='image' />
+            <h1 className='title-name'> {title} </h1>
+            <h4 className='author-name'> {author} </h4>
         </article>
     );
-};
-const Image = () => {
-    return ( 
-        <img src = 'https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg' alt = '' className='image' />
-    );
-};
-
-const Title = () => {
-    return <h2 className='title-name'> The Last Thing He Told Me </h2>;
-};
-
-const Aurthor = () => {
-    return <h4 className='aurthor-name'> Laura Dave </h4>;
 };
 
 ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
