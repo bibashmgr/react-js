@@ -204,46 +204,177 @@ import './styles/index.css';
 //     );
 // };
 
-// setting-up variables:
-const books = [
-{
-    img: 'https://pos.booksmandala.com/images/3936',
-    title: 'Sold',
-    author: ' Patricia McCormick'
-},
-{
-    img: 'https://pos.booksmandala.com/images/5226',
-    title: 'The Fifth mountain',
-    author: 'Paulo Coelho'
-},
-{
-    img: 'https://pos.booksmandala.com/images/8525',
-    title: 'Kara',
-    author: 'Sushil Karki'
-}
-];
+// // setting-up variables:
+// const books = [
+// {
+//     img: 'https://pos.booksmandala.com/images/3936',
+//     title: 'Sold',
+//     author: ' Patricia McCormick'
+// },
+// {
+//     img: 'https://pos.booksmandala.com/images/5226',
+//     title: 'The Fifth mountain',
+//     author: 'Paulo Coelho'
+// },
+// {
+//     img: 'https://pos.booksmandala.com/images/8525',
+//     title: 'Kara',
+//     author: 'Sushil Karki'
+// }
+// ];
 
-const BookList = () => {
-    return(
-        <section className='books-box'>
-            {books.map((book) => {
-                return(
-                    <Book book = {book}></Book>
-                );
-            })}
-        </section>
-    );
-};
+// const BookList = () => {
+//     return(
+//         <section className='books-box'>
+//             {books.map((book) => {
+//                 return(
+//                     <Book book = {book}></Book>
+//                 );
+//             })}
+//         </section>
+//     );
+// };
 
-const Book = (props) => {
-    const {img, title, author} = props.book;
-    return(
-        <article className='book-box'>
-            <img src={img} alt={img} className='image' />
-            <h1 className='title-name'> {title} </h1>
-            <h4 className='author-name'> {author} </h4>
-        </article>
-    );
-};
+// const Book = (props) => {
+//     const {img, title, author} = props.book;
+//     return(
+//         <article className='book-box'>
+//             <img src={img} alt={img} className='image' />
+//             <h1 className='title-name'> {title} </h1>
+//             <h4 className='author-name'> {author} </h4>
+//         </article>
+//     );
+// };
 
-ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
+// ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
+
+// // setting-up variables:
+// const books = [
+// {
+//     id: 1,
+//     img: 'https://pos.booksmandala.com/images/3936',
+//     title: 'Sold',
+//     author: ' Patricia McCormick'
+// },
+// {   
+//     id: 2,
+//     img: 'https://pos.booksmandala.com/images/5226',
+//     title: 'The Fifth mountain',
+//     author: 'Paulo Coelho'
+// },
+// {
+//     id: 3,
+//     img: 'https://pos.booksmandala.com/images/8525',
+//     title: 'Kara',
+//     author: 'Sushil Karki'
+// }
+// ];
+
+// const BookList = () => {
+//     return(
+//         <section className='books-box'>
+//             {books.map((book) => {
+//                 return(
+//                     // passing unique key to props
+//                     // using spread operators
+//                     <Book key={book.id} {...book}></Book>
+//                 );
+//             })}
+//         </section>
+//     );
+// };
+
+// const Book = (props) => {
+//     const {img, title, author} = props;
+//     return(
+//         <article className='book-box'>
+//             <img src={img} alt={img} className='image' />
+//             <h1 className='title-name'> {title} </h1>
+//             <h4 className='author-name'> {author} </h4>
+//         </article>
+//     );
+// };
+
+// ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
+
+// // setting-up variables:
+// const books = [
+// {
+//     id: 1,
+//     img: 'https://pos.booksmandala.com/images/3936',
+//     title: 'Sold',
+//     author: ' Patricia McCormick',
+//     price: 1000
+// },
+// {   
+//     id: 2,
+//     img: 'https://pos.booksmandala.com/images/5226',
+//     title: 'The Fifth mountain',
+//     author: 'Paulo Coelho',
+//     price: 800
+// },
+// {
+//     id: 3,
+//     img: 'https://pos.booksmandala.com/images/8525',
+//     title: 'Kara',
+//     author: 'Sushil Karki',
+//     price: 500
+// }
+// ];
+
+// const BookList = () => {
+//     return(
+//         <section className='books-box'>
+//             {books.map((book) => {
+//                 return(
+//                     // passing unique key to props
+//                     // using spread operators
+//                     <Book key={book.id} {...book}></Book>
+//                 );
+//             })}
+//         </section>
+//     );
+// };
+
+// const Book = (props) => {
+//     const {img, title, author, price} = props;
+
+//     // events
+//     const clickHandler = () => {
+//         window.alert("Thank you for buying!")
+//     };
+//     return(
+//         <article className='book-box'>
+//             <img src={img} alt={img} className='image' />
+//             <h1 className='title-name'> {title} </h1>
+//             <h4 className='author-name'> {author} </h4>
+//             <div className='price'>Rs. {price}/-</div>
+//             // clickHandler() automatically invokes without any events
+//             // whereas clickHandler doesnot
+//             <button type='button' className='buy-btn' onClick= {clickHandler}>Buy</button>
+//         </article>
+//     );
+// };
+
+// ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
+
+// import components:
+
+// import {books} from './basics/books';
+// import Book from './basics/Book';
+
+// const BookList = () => {
+//     return(
+//         <section className='books-box'>
+//             {books.map((book) => {
+//                 return(
+//                     // passing unique key to props
+//                     // using spread operators
+//                     <Book key={book.id} {...book}></Book>
+//                 );
+//             })}
+//         </section>
+//     );
+// };
+
+// ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
