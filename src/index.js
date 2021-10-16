@@ -93,7 +93,7 @@ import './styles/index.css';
 // };
 
 // function BookList() {
-//     return ( 
+//     return (
 //         <section className='books-box'>
 //             <Book></Book>
 //             <Book></Book>
@@ -112,7 +112,7 @@ import './styles/index.css';
 //     );
 // };
 // const Image = () => {
-//     return ( 
+//     return (
 //         <img src = 'https://m.media-amazon.com/images/I/91PU12hpz8S._AC_UY327_FMwebp_QL65_.jpg' alt = '' className='image' />
 //     );
 // };
@@ -170,22 +170,22 @@ import './styles/index.css';
 // const BookList = () => {
 //     return(
 //         <section className='books-box'>
-//             <Book 
-//                 img = {firstBook.img} 
-//                 title = {firstBook.title} 
+//             <Book
+//                 img = {firstBook.img}
+//                 title = {firstBook.title}
 //                 author = {firstBook.author}>
 //                 <p>
 //                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iusto natus cupiditate dolores corporis magni dolorum facere, quos nisi sint officia quia! Ut odio doloribus porro. Dicta quam laborum perspiciatis!
 //                 </p>
 //             </Book>
-//             <Book 
-//                 img = {secondBook.img} 
-//                 title = {secondBook.title} 
+//             <Book
+//                 img = {secondBook.img}
+//                 title = {secondBook.title}
 //                 author = {secondBook.author}>
 //             </Book>
-//             <Book 
-//                 img = {thirdBook.img} 
-//                 title = {thirdBook.title} 
+//             <Book
+//                 img = {thirdBook.img}
+//                 title = {thirdBook.title}
 //                 author = {thirdBook.author}>
 //             </Book>
 //         </section>
@@ -256,7 +256,7 @@ import './styles/index.css';
 //     title: 'Sold',
 //     author: ' Patricia McCormick'
 // },
-// {   
+// {
 //     id: 2,
 //     img: 'https://pos.booksmandala.com/images/5226',
 //     title: 'The Fifth mountain',
@@ -306,7 +306,7 @@ import './styles/index.css';
 //     author: ' Patricia McCormick',
 //     price: 1000
 // },
-// {   
+// {
 //     id: 2,
 //     img: 'https://pos.booksmandala.com/images/5226',
 //     title: 'The Fifth mountain',
@@ -360,21 +360,27 @@ import './styles/index.css';
 
 // import components:
 
-// import {books} from './basics/books';
+// import { books } from './basics/books';
 // import Book from './basics/Book';
 
 // const BookList = () => {
-//     return(
-//         <section className='books-box'>
-//             {books.map((book) => {
-//                 return(
-//                     // passing unique key to props
-//                     // using spread operators
-//                     <Book key={book.id} {...book}></Book>
-//                 );
-//             })}
-//         </section>
-//     );
+//   return (
+//     <section className='books-box'>
+//       {books.map((book) => {
+//         return (
+//           // passing unique key to props
+//           // using spread operators
+//           <Book key={book.id} {...book}></Book>
+//         );
+//       })}
+//     </section>
+//   );
 // };
 
-// ReactDOM.render( <BookList></BookList> , document.getElementById('root'));
+// ReactDOM.render(<BookList></BookList>, document.getElementById('root'));
+
+// Advance react-js
+
+import App from './App.js';
+
+ReactDOM.render( <App></App>, document.getElementById('root'));
