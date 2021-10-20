@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Array() {
+function UseStateArray() {
     const data = [
         {
             id:1,
@@ -32,9 +32,10 @@ function Array() {
             <h1>Usestate Array</h1>
             <div>
                 {people.map((person)=>{
+                    const {id,name} = person;
                     return(
-                        <div style={{display:'flex', justifyContent:'space-evenly',marginBottom:'10px'}}>
-                            <div key={person.id}>{person.name}</div>
+                        <div key={id}>
+                            <h4>{name}</h4>
                             <button type='button' className='btn' onClick={()=>{removeItem(person.id)}}>Remove</button>
                         </div>
                     );
@@ -45,4 +46,4 @@ function Array() {
     )
 }
 
-export default Array;
+export default UseStateArray;

@@ -1,7 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
 
-const Error = () => {
+const UseStateError = () => {
   let title = 'Random title';
   const changeTitle = () => {
     title = 'New title';
@@ -18,4 +17,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default UseStateError;

@@ -67,7 +67,7 @@ body {
 .container {
     width: 90vw;
     margin: 50px auto;
-    text-align: center;
+    padding: auto;
 }
 
 .btn {
@@ -80,4 +80,5 @@ body {
     border-radius: 2.5px;
     background-color: dodgerblue;
     cursor: pointer;
+    margin: 20px 0px;
 }

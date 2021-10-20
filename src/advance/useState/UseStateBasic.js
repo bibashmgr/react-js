@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 
-function Basic() {
+function UseStateBasic() {
     // console.log(useState);
     const [text, setText] = useState('Random title');
     const clickHandler = () => {
@@ -10,6 +10,7 @@ function Basic() {
         } else {
             setText('Random title');
         }
+        // console.log('Render');
     };
     return (
         <div>
@@ -20,4 +21,4 @@ function Basic() {
     )
 }
 
-export default Basic;
+export default UseStateBasic;

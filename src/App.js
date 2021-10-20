@@ -1,5 +1,5 @@
 import React from 'react';
-import Setup from './advance/useState/array';
+import Setup from './advance/useState/UseStateObject';
 
 function App() {
   return(
