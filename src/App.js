@@ -2,12 +2,12 @@
 import React from 'react';
 
 // components
-import Basic from './advance/useRef/Basic';
+
 
 function App() {
   return(
     <>
-      <Basic></Basic>
+      <h1 className='text-center'>This is App</h1>
     </>
   )
 }
